@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据面板</title>
+    <link rel="stylesheet" href="http://127.0.0.1:8080/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="page-title">数据面板</h1>
+    </header>
+
+    <main>
+        <!-- 顶部部分 -->
+        <section class="dashboard-top">
+            <!-- 饼图 -->
+            <div class="chart pie-chart">
+                <h2>当前月份正常与错误情况</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+        
+            <!-- 柱状图 -->
+            <div class="chart bar-chart">
+                <h2>历史月份正常天数</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        
+            <!-- 当前在线情况 -->
+            <div class="current-status">
+                <h2>当前在线情况</h2>
+                <div class="status-card">
+                    <div class="status-icon">
+                        <span id="status-icon" class="checkmark">&#10004;</span>
+                    </div>
+                    <div class="status-info">
+                        <p id="online-status-text">所有系统运行正常</p>
+                        <p id="last-update-time">最近更新：2024-12-30 10:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 中间控制部分 -->
+        <section class="control-panel">
+            <button id="refreshData" class="btn btn-primary">刷新数据</button>
+            <input type="date" id="startDate" class="date-input">
+            <input type="date" id="endDate" class="date-input">
+            <button id="addData" class="btn btn-secondary">手动添加数据</button>
+        </section>
+
+        <!-- 数据表格部分 -->
+        <section class="data-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>记录 ID</th>
+                        <th>时间戳</th>
+                        <th>状态</th>
+                        <th>详细信息</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- 数据行动态生成 -->
+                </tbody>
+            </table>
+            <!-- 分页功能 -->
+            <div class="pagination">
+                <button id="prevPage" class="btn">上一页</button>
+                <span id="currentPage">1</span>
+                <button id="nextPage" class="btn">下一页</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="http://127.0.0.1:8080/static/js/scripts.js"></script>
+</body>
+</html>

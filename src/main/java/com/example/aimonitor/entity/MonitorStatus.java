@@ -15,6 +15,15 @@ public class MonitorStatus {
     private boolean status;
     private String message;
 
+    public MonitorStatus() {
+    }
+
+    public MonitorStatus(String time, boolean status, String message) {
+        this.time = time;
+        this.status = status;
+        this.message = message;
+    }
+
     public Long getId() {
         return id;
     }

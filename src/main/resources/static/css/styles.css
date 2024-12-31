@@ -1,0 +1,203 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9FAFB;
+    color: #111827;
+}
+
+header {
+    background-color: #1E293B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* 顶部部分样式 */
+.dashboard-top {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr; /* 饼图、柱状图、小列表的比例调整 */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.chart {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 1.5rem; /* 增加图表内部空间 */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recent-errors {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recent-errors ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem; /* 减小字体，防止列表拥挤 */
+}
+
+/* 控制面板样式 */
+.control-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-input {
+    padding: 0.5rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #2563EB;
+}
+
+.btn-secondary {
+    background-color: #10B981;
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+    background-color: #059669;
+}
+
+/* 表格样式 */
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.data-table th, .data-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.data-table th {
+    background-color: #F3F4F6;
+    color: #111827;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.pagination .btn {
+    margin: 0 0.5rem;
+}
+
+.chart canvas {
+    max-width: 100%;
+    max-height: 400px; /* 限制图表最大高度 */
+}
+
+/* 当前在线情况样式 */
+.current-status {
+    flex: 0.5; /* 调整宽度比例 */
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 当前在线情况样式 */
+.status-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 错误状态样式 */
+.status-icon.error {
+    background-color: #FFFFFF; /* 错误状态圆圈的背景是白色 */
+    color: #F43F5E; /* 叉号的颜色是红色 */
+    border: 2px solid #F43F5E; /* 红色边框 */
+    font-size: 1.5rem; /* 控制符号大小 */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* 确保为圆形 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.status-info {
+    text-align: center;
+}
+
+.status-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+#last-update-time {
+    font-size: 0.8rem;
+    color: #6B7280;
+}
+
+/* 正确状态样式 */
+.status-icon.success {
+    background-color: #10B981; /* 正确状态为绿色背景 */
+    color: #FFFFFF; /* 勾号为白色 */
+    font-size: 1.5rem; /* 控制符号大小 */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* 确保为圆形 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
